@@ -1,0 +1,29 @@
+{
+    "retriever": {
+        "model_id": "BAAI/bge-m3",
+        "k": 1
+    },
+    "models": [
+        {
+            "name": "mistral",
+            "model_id": "unsloth/Mistral-Nemo-Instruct-2407-bnb-4bit",
+            "low_cpu_mem_usage": true,
+            "gpu_memory_utilization": 0.9
+        },
+        {
+            "name": "llama3.3",
+            "model_id": "unsloth/Llama-3.3-70B-Instruct-bnb-4bit",
+            "low_cpu_mem_usage": true
+        }
+        
+    ],
+    "generation": {
+        "max_new_tokens": 500,
+        "temperature": 0.4,
+        "top_p": 0.9,
+        "do_sample": true,
+        "repetition_penalty": 1.2,
+        "no_repeat_ngram_size": 3,
+        "early_stopping": true
+    }
+}

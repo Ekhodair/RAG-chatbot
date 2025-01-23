@@ -1,0 +1,20 @@
+services:
+  doc-qa6:
+    env_file:
+      - .env
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0', '1']
+            capabilities: [gpu]
+    ports:
+      - "8083:8083"
+      - "8501:8501"
+    volumes:
+      - ./app_logs:/Doc-QA/app_logs
+      - ./chroma_db:/Doc-QA/chroma_db
+      - ./session_logs_db:/Doc-QA/session_logs_db
+      - ~/.cache/huggingface/hub:/root/.cache/huggingface/hub
