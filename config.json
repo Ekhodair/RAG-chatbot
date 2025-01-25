@@ -5,15 +5,16 @@
     },
     "models": [
         {
-            "name": "mistral",
-            "model_id": "unsloth/Mistral-Nemo-Instruct-2407-bnb-4bit",
+            "name": "gemma",
+            "model_id": "shuyuej/gemma-2-27b-it-GPTQ",
             "low_cpu_mem_usage": true,
-            "gpu_memory_utilization": 0.9
+            "gpu_memory_utilization": 0.5
         },
         {
             "name": "llama3.3",
-            "model_id": "unsloth/Llama-3.3-70B-Instruct-bnb-4bit",
-            "low_cpu_mem_usage": true
+            "model_id": "casperhansen/llama-3.3-70b-instruct-awq",
+            "low_cpu_mem_usage": true,
+            "gpu_memory_utilization": 0.9
         }
         
     ],
