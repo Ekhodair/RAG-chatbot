@@ -16,7 +16,7 @@ from helpers.db_utils import (
 from helpers.chroma_utils import index_document_to_chroma, delete_doc_from_chroma
 from helpers.constants import SYSTEM_PROMPT
 from schemas import QueryInput, DocumentInfo, DeleteFileRequest
-from core import DocQA
+from core.run_vllm import DocQA
 from constants import LOGS_DIR
 
 
