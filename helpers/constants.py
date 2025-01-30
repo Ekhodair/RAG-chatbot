@@ -22,7 +22,7 @@ HF_TOKEN = os.getenv('HF_TOKEN')
 # DB
 CHROMA_DB_NAME = "chroma_db"
 SQL_DB_NAME = "session_logs_db"
-LOGS_DIR = "app_logs"
+LOGGING_LEVEL = os.getenv("LOGGING_LEVEL", "DEBUG")
 # configs
 GLOBAL_CONFIG = load_config(config_path)
 # Prompts
