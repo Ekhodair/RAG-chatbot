@@ -1,5 +1,8 @@
+# ====================================================
+# This file is deprecated and no longer used.
+# ====================================================
+
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Dict, Generator, List, Tuple, Any
 from threading import Thread
 from transformers import AutoTokenizer
@@ -70,9 +73,7 @@ class DocQA:
         model_name: str,
         messages: List[Dict[str, str]]
     ) -> Generator[Tuple[str, str, str], None, None]:
-    
-        if not query.strip():
-            raise ValueError("Query cannot be empty")
+        """Generate responses for a given query using the specified model."""
         if model_name not in self.models:
             raise KeyError(f"Model {model_name} not found. Available models: {list(self.models.keys())}")
 
